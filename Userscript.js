@@ -6,7 +6,7 @@
 // @author       Gary Smith
 // @match        https://xxxx.atlassian.net/*
 // @include      https://xxxx.atlassian.net/*
-// @icon         https://xx.atlassian.net/images/icons/priorities/major.svg
+// @icon         https://github.com/DamagedDingo/Jira-Table-Formatter/blob/main/table_rows_white_24dp.svg
 // @grant        none
 // ==/UserScript==
 
