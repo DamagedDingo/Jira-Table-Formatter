@@ -24,7 +24,6 @@ setTimeout((function() {
             warnAt;
         if (!ttr) {
             // gets the contents of the cell [9] and uses other fuction to convert time to minutes
-            // const ttfrContent = tr.querySelector(".customfield_12620");
             const ttfrContent = tr.querySelector('.customfield_12620').textContent;
             timeLeft = readTime(ttfrContent);
             warnAt = 48 * 60;
@@ -32,7 +31,7 @@ setTimeout((function() {
         else {
             // gets the contents of the cell [10] and uses other fuction to convert time to minutes
             // const ttrContent = tr.querySelector(".customfield_12619");
-            const ttrContent = cells[10].textContent;
+            const ttrContent = tr.querySelector('.customfield_12619').textContent;
             timeLeft = readTime(ttrContent);
             warnAt = 240 * 60;
         }
