@@ -10,9 +10,14 @@
 // @grant        none
 // ==/UserScript==
 
+// set to false to skip TTR
 const ttr = false;
-// time to wait before running in milliseconds
-const INIT_WAIT = 2500;
+// set TTR maximum SLA
+const maxTTR = 240;
+// set TTFR maximum SLA
+const maxTTFR = 48;
+// time to wait before running
+const INIT_WAIT = 1000;
 
 setTimeout((function() {
 	// function to return cell value in minutes, devided by the SLA (Value between 0-1 with 1 being full red)
@@ -26,14 +31,14 @@ setTimeout((function() {
             // gets the contents of the cell [9] and uses other fuction to convert time to minutes
             const ttfrContent = tr.querySelector('.customfield_12620').textContent;
             timeLeft = readTime(ttfrContent);
-            warnAt = 48 * 60;
+            warnAt = maxTTFR * 60;
         }
         else {
             // gets the contents of the cell [10] and uses other fuction to convert time to minutes
             // const ttrContent = tr.querySelector(".customfield_12619");
             const ttrContent = tr.querySelector('.customfield_12619').textContent;
             timeLeft = readTime(ttrContent);
-            warnAt = 240 * 60;
+            warnAt = maxTTR * 60;
         }
 
 
